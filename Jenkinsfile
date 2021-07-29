@@ -4,10 +4,10 @@ pipeline{
 		stage('create html file'){
 			steps{
 				sh '''
-					if [[ ! -e index.db ]];then
+					if [[ ! -e marathon_test/index.db ]];then
 						python3 marathon_test/create_db.py
 					fi
-					python3 gen_html.py
+					python3 marathon_test/gen_html.py
 				   '''
 			}
 		}
