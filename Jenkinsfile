@@ -1,5 +1,5 @@
 pipeline{
-agent {node {label 'workers'}}
+	agent any
  	stages{
 		stage('create html file'){
 			steps{
